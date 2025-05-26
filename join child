@@ -1,0 +1,65 @@
+Alright! Imagine you have two LEGO boxes:
+
+One box has people's names and their favorite toy ID
+
+The other box has toy IDs and the toy names
+
+
+Box 1: People
+
+Person	Toy ID
+
+Alice	1
+Bob	2
+Carol	3
+
+
+Box 2: Toys
+
+Toy ID	Toy Name
+
+1	Teddy Bear
+2	Toy Car
+4	Robot
+
+
+Now you want to know which toy each person likes, using the toy ID to match both boxes. That’s what a JOIN does!
+
+
+---
+
+Types of JOINS (like ways of playing):
+
+1. INNER JOIN:
+
+Only show people who have a matching toy.
+
+Result: | Person | Toy Name   | |--------|------------| | Alice  | Teddy Bear | | Bob    | Toy Car    |
+
+Carol liked toy ID 3, but that toy wasn’t found in the toy box — so she is not shown.
+
+
+---
+
+2. LEFT JOIN:
+
+Show everyone from the people box, even if their toy is missing.
+
+Result: | Person | Toy Name   | |--------|------------| | Alice  | Teddy Bear | | Bob    | Toy Car    | | Carol  | NULL       | ← No toy found
+
+
+---
+
+3. RIGHT JOIN:
+
+Show all toys, even if no person likes them.
+
+Result: | Person | Toy Name   | |--------|------------| | Alice  | Teddy Bear | | Bob    | Toy Car    | | NULL   | Robot      | ← No one likes this toy
+
+
+---
+
+So, think of JOINs like connecting boxes using toy IDs — to build a big new box with all the info you want!
+
+Want a fun story or drawing version too?
+
