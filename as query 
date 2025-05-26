@@ -1,0 +1,58 @@
+Perfect! You want to use multiple tables without JOIN, but still use AS — here's how that works.
+
+
+---
+
+1. Select from multiple tables (not recommended in real use, but possible)
+
+SELECT 
+  p.name AS person_name,
+  t.toy_name AS toy_name
+FROM people AS p, toys AS t;
+
+This is called a Cartesian product — it combines every row in people with every row in toys, like multiplying them together.
+
+If people has 3 rows and toys has 2 rows, the result will have 3 × 2 = 6 rows.
+
+
+---
+
+Example:
+
+people table:
+
+id	name	toy_id
+
+1	Alice	1
+2	Bob	2
+
+
+toys table:
+
+id	toy_name
+
+1	Teddy Bear
+2	Toy Car
+
+
+Query:
+
+SELECT 
+  p.name AS person_name, 
+  t.toy_name AS toy
+FROM people AS p, toys AS t;
+
+Result: | person_name | toy       | |-------------|-----------| | Alice       | Teddy Bear| | Alice       | Toy Car   | | Bob         | Teddy Bear| | Bob         | Toy Car   |
+
+
+---
+
+When to use this:
+
+Only when you really want all combinations (rare). Usually, JOIN is better to match rows properly.
+
+
+---
+
+Let me know if you want to filter them or add conditions!
+
