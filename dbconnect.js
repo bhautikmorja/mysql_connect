@@ -5,6 +5,8 @@ export const db = mysql({
     database: process.env.MYSQL_DATABASE,
     user: process.env.MYSQL_USERNAME,
     password: process.env.MYSQL_PASSWORD,
+        charset   : 'utf8mb4',
+    collation : 'utf8mb4_unicode_ci'
   }
 })
 export async function sql_query(query, value = [], type = 'Single') {
