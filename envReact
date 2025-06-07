@@ -1,0 +1,10 @@
+VITE_BACKEND_URL=http://localhost:8000
+
+import axios from "axios"
+
+console.log(" import.meta.env.BACKEND_URL")
+
+const api = axios.create({
+    baseURL: import.meta.env.BACKEND_URL})
+
+export default api
